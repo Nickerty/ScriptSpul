@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Yathzee</title>
+</head>
+<body>
+    <table id = dobbelstenen>
+        <tr>
+            <th id = worp1></th>
+            <th id = worp2></th>
+            <th id = worp3></th>
+            <th id = worp4></th>
+            <th id = worp5></th>
+        </tr>
+    </table>
+
+    <button id = button>Jas 'm erin</button>
+
+    <table id = scoreDeelEen>
+        <tr>
+            <th>Deel 1</th>
+            <th>Punten telling</th>
+            <th>1e spel</th>
+            <th>2e spel</th>
+            <th>3e spel</th>
+            <th>4e spel</th>
+            <th>5e spel</th>
+            <th>6e spel</th>
+        </tr>
+        <tr>
+            <td>Enen</td>
+            <td>Tel alle Enen</td>
+            <td id = ones></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tweeën</td>
+            <td>Tel alle Tweeën</td>
+            <td id = twos></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Drieën</td>
+            <td>Tel alle Drieën</td>
+            <td id = threes></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Vieren</td>
+            <td>Tel alle Vieren</td>
+            <td id = fours></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Vijven</td>
+            <td>Tel alle Vijven</td>
+            <td id = fives></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Zessen</td>
+            <td>Tel alle Zessen</td>
+            <td id = ANDABUNCHOFSIXES></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Totaal aantal punten</td>
+            <td></td>
+            <td id = totalOne></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table id = scoreDeelTwee>
+        <tr>
+            <th>Deel 2</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Three of a kind</td>
+            <td>3 dezelfde</td>
+            <td>Totaal v.d. 5 stenen</td>
+            <td id = threeOfAKind></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Carré</td>
+            <td>4 dezelfde</td>
+            <td>Totaal v.d. 5 stenen</td>
+            <td id = fourOfAKind></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Full House</td>
+            <td>2 + 3 dezelfde</td>
+            <td>25 punten</td>
+            <td id = fullHouse></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Kleine straat</td>
+            <td>4 opeenvolgende nummers</td>
+            <td>30 punten</td>
+            <td id = smallStraight></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Grote Straat</td>
+            <td>5 opeenvolgende nummers</td>
+            <td>40 punten</td>
+            <td id = bigStraight></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Yathzee</td>
+            <td>5 dezelfde</td>
+            <td>50 punten</td>
+            <td id = yatzhee></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Change</td>
+            <td>vrije keuze als je alleen maar rommel hebt</td>
+            <td>Totaal v.d. 5 stenen</td>
+            <td id = garbage></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Totaal</td>
+            <td>van de onderste helft</td>
+            <td></td>
+            <td id = totalTwo></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Totaal</td>
+            <td>van de bovenste helft</td>
+            <td></td>
+            <td id = totalOne></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Totaal Generaal</td>
+            <td></td>
+            <td></td>
+            <td id = grandTotal></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
