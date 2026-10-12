@@ -6,12 +6,21 @@
 	<title>Javascript Blackjack</title>
 </head>
 <body>
-    <h3>BlackyJacky</h3>
-    <div id="dealer"></div>
-    <div id = "player"></div>
+    <h1>BlackyJacky</h1>
+    <p id = "result"></p>
+    <div id="dealer" style="display: none;">
+        <h2>Dealer Kaarten</h2>
+        <span id = "dealerHand"></span>
+        <p id = "dealerScore"></p>
+    </div>
+    <div id = "player" style="display: none;">
+        <h2>Jouw Kaarten</h2>
+        <span id = "playerHand"></span>
+        <p id = "playerScore"></p>
+    </div>
     <button id="start">Get 'em going</button>
-    <button id="hit">Hit me u coward</buton>
-    <button id="pass">I'm done, no way this hand loses</button>
-    <button id="again">I have developed a gambling addiction and require another game</button>
+    <button id="hit" style="display: none;">Hit me u coward</buton>
+    <button id="pass" style="display: none;">I'm done, no way this hand loses</button>
+    <button id="again" style="display: none;">I have developed a gambling addiction and require another game</button>
     <script src="script.js"></script>
 </body>
