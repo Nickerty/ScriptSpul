@@ -4,7 +4,7 @@ import { ref, computed } from 'vue';
 const people = ref([
     { name: 'Jeaean', age: 2},
     { name: 'Pieieter', age: 35},
-    { name: ' Eternal Clud', age: 9000000}
+    { name: 'Eternal Clud', age: 9000000}
 ]);
 
 const newName = ref(null);
