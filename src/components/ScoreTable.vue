@@ -2,8 +2,6 @@
 import { computed, ref } from 'vue'
 
 const dice = defineModel();
-// const dice = defineModel<number[]>({ default: () => [] });
-
 
 const countDice = computed(() => {
     const count = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
@@ -38,7 +36,7 @@ const bigStraight = computed(() => isStraight(5, countDice.value) ? 40 : 0);
 
 const yathzee = computed(() => isOfAKind(5, countDice.value) ? 50 : 0);
 
-// const partTwoTotal = computed(() =>)
+const partTwoTotal = computed(() => threeOfAKind.value + fourOfAKind.value + fullHouse.value + smallStraight.value + bigStraight.value + yathzee.value + diceTotal.value);
 
 
 const isOfAKind = (amount, dice) => {
@@ -80,17 +78,6 @@ const isStraight = (amount, dice) => {
 </script>
 
 <template>
-
-<!-- <table>
-    <tr>
-        <th id = worp1></th>
-        <th id = worp2></th>
-        <th id = worp3></th>
-        <th id = worp4></th>
-        <th id = worp5></th>
-    </tr>
-</table> -->
-
 <table id = scoreDeelEen>
     <tr>
         <th>Deel 1</th>
@@ -258,7 +245,7 @@ const isStraight = (amount, dice) => {
         <td>Totaal</td>
         <td>van de onderste helft</td>
         <td></td>
-        <td id = totalTwo></td>
+        <td >{{ partTwoTotal }}</td>
         <td></td>
         <td></td>
         <td></td>
@@ -278,7 +265,7 @@ const isStraight = (amount, dice) => {
         <td>Totaal Generaal</td>
         <td></td>
         <td></td>
-        <td id = grandTotal></td>
+        <td>{{ diceTotal + partTwoTotal }}</td>
         <td></td>
         <td></td>
         <td></td>

@@ -14,9 +14,11 @@ const rollSomeDice = () => {
 
 <template>
 
-<li>
-    <li v-for="roll in dice"> {{ roll }} </li>
-</li>
+<table>
+    <tr>
+        <th v-for="roll in dice"> {{ roll }} </th>
+    </tr>
+</table>
 <p>&nbsp;</p>
 <button @click="rollSomeDice">Gooi die vierkante vrienden maar weer</button>
 
