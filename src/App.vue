@@ -1,34 +1,17 @@
 <script setup lang="ts">
-import ThrownDice from './components/ThrownDice.vue';
-import ScoreTable from './components/ScoreTable.vue';
-import { ref } from 'vue'
-
-const dice = ref([]);
+import { RouterLink } from 'vue-router';
 
 </script>
 
 <template>
 
-<ThrownDice v-model="dice" />
-<p>&nbsp;</p>
-<ScoreTable v-model="dice" />
+<nav>
+    <RouterLink to ="/create">Ga naar creatine</RouterLink>
+    <RouterLink to ="/overview">VOORWAARTS NAAR OVERVIEW</RouterLink>
+</nav>
+
+<RouterView></RouterView>
 
 </template>
 
 <style></style>
-
-<!-- <script setup lang="ts">
-import { ref } from 'vue'
-import GroceriesTable from './components/GroceriesTable.vue';
-
-const producten = ref([]);
-
-</script>
-
-<template>
-
-<GroceriesTable v-model="producten" />
-
-</template>
-
-<style></style> -->
