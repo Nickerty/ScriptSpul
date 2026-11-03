@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import GroceriesTable from '@/components/GroceriesTable.vue';
-import { ref } from 'vue'
+import { getAllProducten } from '../store';
 
-const producten = ref([]);
+const producten = getAllProducten;
 
 </script>
 
 <template>
-
-    <p>test</p>
 
 <GroceriesTable v-model="producten" />
 
