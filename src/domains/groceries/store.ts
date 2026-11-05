@@ -1,11 +1,11 @@
-import { computed, ref } from 'vue'
+import { computed, ref } from "vue";
 
-//state
+// State
+const groceries = ref([]);
 
-const producten = ref([]);
+// Getters
+export const getAllGroceries = computed(() => groceries.value);
+export const getGroceryById = (id: number) => computed(() => groceries.value.find(grocery => grocery.id == id));
 
-//getters
-
-export const getAllProducten = computed(() => producten.value);
-
-//actions
+// Actions
+export const addGrocery = (grocery: Object) => groceries.value.push(grocery);
