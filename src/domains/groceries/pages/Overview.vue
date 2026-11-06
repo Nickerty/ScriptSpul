@@ -4,7 +4,6 @@ import { getAllGroceries } from '../store';
 
 const groceries = getAllGroceries;
 
-
 </script>
 
 <template>
