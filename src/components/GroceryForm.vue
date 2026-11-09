@@ -1,16 +1,20 @@
 <script setup lang="ts">
+import { router } from '@/router';
 import { ref } from 'vue';
 
 const props = defineProps({
     grocery: Object
 })
 
-const groceryCopy = ref(structuredClone(props.grocery));
+const groceryCopy = ref({...props.grocery});
 
 const emit = defineEmits(['submitEvent']);
 
 const submitEvent = () => {
-    emit('submitEvent', groceryCopy.value);
+    if (groceryCopy.value.name) {
+        emit('submitEvent', groceryCopy.value);
+        router.push('/overview');
+    }
 }
 
 </script>
@@ -20,9 +24,8 @@ const submitEvent = () => {
 <input v-model="groceryCopy.name" placeHolder="Naam van product" type="text">
 <input v-model="groceryCopy.price" type="number">
 <input v-model="groceryCopy.amount" type="number">
-<button @click="submitEvent">Voeg toe</button>
+<button @click="submitEvent">Bevestig</button>
 
 </template>
 
 <style></style>
-

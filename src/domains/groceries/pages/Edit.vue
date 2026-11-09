@@ -9,8 +9,6 @@ const grocery = getGroceryById(route.params.id);
 </script>
 
 <template>
-    
-<p>hey wat is dit? {{ grocery }}</p>
 
 <GroceryForm :grocery="grocery" @submitEvent="updateGrocery"/>
 

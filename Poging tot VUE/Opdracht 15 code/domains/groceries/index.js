@@ -1,0 +1,1 @@
+createApp(Groceries).use(router).mount('#groceries');

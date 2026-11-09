@@ -15,6 +15,11 @@ export const addGrocery = (grocery: Object) => {
 }
 
 export const updateGrocery = (updatedGrocery: Object) => {
-    const index = groceries.value.findIndex(grocery => grocery.id = updatedGrocery.id);
-    groceries.value[index] = updateGrocery;
+    const index = groceries.value.findIndex(grocery => grocery.id === updatedGrocery.id);
+    groceries.value[index] = updatedGrocery;
+}
+
+export const removeGrocery = (groceryId: Number) => {
+    const index = groceries.value.findIndex(grocery => grocery.id === groceryId);
+    groceries.value.splice(index, 1);
 }
