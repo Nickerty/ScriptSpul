@@ -1,7 +1,7 @@
 import { createMemoryHistory, createRouter } from 'vue-router';
-import { groceryRoutes } from '../domains/groceries/routes';
+import { inventoryRoutes } from '../domains/inventory/routes';
 
-const routes = groceryRoutes
+const routes = inventoryRoutes
 
 export const router = createRouter({
       history: createMemoryHistory(),
