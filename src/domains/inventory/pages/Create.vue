@@ -1,15 +1,16 @@
 <script setup lang="ts">
-// import GroceryForm from '@/components/GroceryForm.vue';
-// import { addGrocery } from '../store';
+import ProductForm from '../components/ProductForm.vue';
+import { addProduct } from '../store';
 
-// const grocery = {id: 0, name: '', price: 0, amount: 0};
 
-// </script>
+const product = {id: 0, name: '', actualAmount: 0, minimumAmount: 0};
 
-// <template>
+</script>
 
-// <GroceryForm :grocery="grocery" @submitEvent="addGrocery"/>
+<template>
 
-// </template>
+<ProductForm :product="product" @submitEvent="addProduct"/>
 
-// <style></style>
+</template>
+
+<style></style>

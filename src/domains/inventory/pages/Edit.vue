@@ -1,17 +1,23 @@
 <script setup lang="ts">
-// import GroceryForm from '@/components/GroceryForm.vue';
-// import { getGroceryById, updateGrocery } from '../store';
-// import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
+import { getProductById, updateProduct } from '../store';
+import ProductForm from '../components/ProductForm.vue';
 
-// const route = useRoute();
-// const grocery = getGroceryById(route.params.id);
+const route = useRoute();
+const router = useRouter();
 
-// </script>
+const product = getProductById(Number(route.params.id));
 
-// <template>
+if (!product) {
+    router.push('/overview');
+}
 
-// <GroceryForm :grocery="grocery" @submitEvent="updateGrocery"/>
+</script>
 
-// </template>
+<template>
 
-// <script></script>
+<ProductForm v-if="product":product="product" @submitEvent="updateProduct"/>
+
+</template>
+
+<script></script>

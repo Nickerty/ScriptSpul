@@ -6,8 +6,9 @@ import { RouterLink } from 'vue-router';
 <template>
 
 <nav>
-    <RouterLink to ="/create">Ga naar creatine</RouterLink>
-    <RouterLink to ="/overview">VOORWAARTS NAAR OVERVIEW</RouterLink>
+    <RouterLink to ="/create">Voeg een spiksplinternieuw product toe</RouterLink>
+    <RouterLink to ="/overview">Het overzicht wacht op ons</RouterLink>
+    <RouterLink to ="/order">Scheiße man, is er wel genoeg van alles?</RouterLink>
 </nav>
 
 <RouterView></RouterView>

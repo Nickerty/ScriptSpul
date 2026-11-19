@@ -1,1 +1,1 @@
-createApp(Groceries).use(router).mount('#groceries');
+createApp(Inventory).use(router).mount('#inventory');

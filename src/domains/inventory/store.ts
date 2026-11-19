@@ -1,4 +1,4 @@
-import { computed, ref } from "vue";
+import { computed, ref, type ComputedRef } from "vue";
 
 // State
 export interface Product {
@@ -23,10 +23,18 @@ const defaultProducts: Product[] = [
 
 const products = ref<Product[]>(defaultProducts);
 
-
 // Getters
-export const getAllProducts = computed(() => products.value);
+export const getAllProducts: ComputedRef<Product[]> = computed(() => products.value);
+export const getProductById = (id: number): ComputedRef<Product | undefined> => computed(() => products.value.find(product => product.id == id));
 
 
 // Actions
+export const addProduct = (product: Product) => {
+    product.id = nextId++;
+    products.value.push(product);
+}
 
+export const updateProduct = (updatedProduct: Product) => {
+    const index = products.value.findIndex(product => product.id === updatedProduct.id);
+    products.value[index] = updatedProduct;
+}

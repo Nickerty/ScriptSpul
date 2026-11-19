@@ -1,0 +1,1 @@
+createApp(Inventory).use(router).mount('#inventory');

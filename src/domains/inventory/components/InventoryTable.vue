@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import type { Product } from '@/domains/inventory/store';
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import type { Product } from '../store';
 
 const inventory = defineModel<Product[]>();
-const amount = ref()
 
 </script>
 <template>
@@ -24,6 +23,7 @@ const amount = ref()
                 <input v-model="item.actualAmount" type="number"/>
             </td>
             <td>{{ item.minimumAmount }}</td>
+            <RouterLink :to="`/edit/${item.id}`" custom v-slot="{ navigate }"><button @click="navigate">Bewerk</button></RouterLink>
         </tr>
     </tbody>
 </table>

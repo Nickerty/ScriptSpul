@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import InventoryTable from '@/components/InventoryTable.vue';
+import InventoryTable from '../components/InventoryTable.vue';
 import { getAllProducts } from '../store';
-
 
 const products = getAllProducts;
 
